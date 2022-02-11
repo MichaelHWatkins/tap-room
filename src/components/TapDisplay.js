@@ -12,6 +12,7 @@ function TapDisplay(props){
           brand={tap.brand}
           price={tap.price}
           alcoholContent={tap.alcoholContent}
+          amountLeft={tap.amountLeft}
           id={tap.id}
           key={tap.id}/>
       )}

@@ -5,7 +5,7 @@ import { v4 } from 'uuid';
 function TapForm(props) {
   function handleNewTicketFormSubmission(event) {
     event.preventDefault();
-    props.onNewTapCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, id: v4()});
+    props.onNewTapCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, amountLeft: event.target.amountLeft.value, id: v4()});
   }
   
 
@@ -28,6 +28,10 @@ function TapForm(props) {
           type='number'
           name='alcoholContent'
           placeholder='alcoholContent' />
+          <input
+          type='number'
+          name='amountLeft'
+          placeholder='amountLeft' />
         
         <button type='submit'>Add Tap!</button>
       </form>
