@@ -5,7 +5,7 @@ import { v4 } from 'uuid';
 function TapForm(props) {
   function handleNewTicketFormSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, id: v4()});
+    props.onNewTapCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, id: v4()});
   }
   
 
@@ -36,7 +36,7 @@ function TapForm(props) {
 }
 
 TapForm.propTypes = {
-  formSubmissionHandler: PropTypes.func,
+  onNewTapCreation: PropTypes.func,
   buttonText: PropTypes.string
 };
 

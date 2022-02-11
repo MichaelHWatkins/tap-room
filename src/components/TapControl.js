@@ -1,4 +1,6 @@
 import React from 'react';
+import TapForm from './TapForm';
+import TapDisplay from './TapDisplay';
 
 class TapControl extends React.Component{
   constructor(props){
@@ -27,12 +29,12 @@ class TapControl extends React.Component{
 
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <TapForm onNewTapCreation={this.handleAddTap}  />;
-      buttonText = "Return to Item List";
+      buttonText = "Return to Tap List";
 
     }
     else {
       currentlyVisibleState = <TapDisplay tapList={this.state.availableTaps}/>;
-      buttonText = "Add Item";
+      buttonText = "Add Tap";
     }
     return(
       <React.Fragment>
