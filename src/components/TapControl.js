@@ -2,7 +2,6 @@ import React from 'react';
 import TapForm from './TapForm';
 import TapDisplay from './TapDisplay';
 import TapDetail from "./TapDetail";
-import {v4} from 'uuid';
 
 class TapControl extends React.Component{
   constructor(props){
@@ -13,6 +12,7 @@ class TapControl extends React.Component{
       selectedTap: null
     };
   }
+
 
   handleChangingSelectedTap = (id) => {
     const selectedTap = this.state.availableTaps.filter(tap => tap.id === id)[0];
@@ -42,7 +42,7 @@ class TapControl extends React.Component{
     let buttonText = null; 
 
     if (this.state.selectedTap != null) {
-      currentlyVisibleState = <TapDetail tap = {this.state.selectedTap}/>
+      currentlyVisibleState = <TapDetail tap = {this.state.selectedTap} onPurchase = {this.handlePurchase}/>
       buttonText = "Return to Item List";
     }
     else if (this.state.formVisibleOnPage) {
@@ -57,7 +57,7 @@ class TapControl extends React.Component{
     return(
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}`</button>
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     )
   }

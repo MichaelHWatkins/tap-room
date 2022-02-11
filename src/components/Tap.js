@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import AmountLeft from "./AmountLeft"
 function Tap(props){
   return (
     <React.Fragment>
@@ -8,8 +9,9 @@ function Tap(props){
         <h3>{props.brand}</h3>
         <h3>{props.price}</h3>
         <h3>{props.alcoholContent}</h3>
-        <h3>{props.amountLeft}</h3>
+        <AmountLeft amountLeft = {props.amountLeft}/>
       <hr/>
+      
       </div>
     </React.Fragment>
   );
