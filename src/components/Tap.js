@@ -9,7 +9,7 @@ function Tap(props){
         <h3>{props.brand}</h3>
         <h3>{props.price}</h3>
         <h3>{props.alcoholContent}</h3>
-        <AmountLeft amountLeft = {props.amountLeft}/>
+        <AmountLeft amountLeft = {props.amountLeft} />
       <hr/>
       
       </div>
