@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ItemControl extends React.Component{
+class TapControl extends React.Component{
   constructor(props){
     super(props);
     this.state = {
