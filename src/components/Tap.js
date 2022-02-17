@@ -1,7 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import AmountLeft from "./AmountLeft"
 function Tap(props){
+  let selling;
+  if(props.amountLeft < 1){
+    selling = "out of stock";
+  }else{
+    selling = <button onClick={()=>props.whenPurchase(props.id)}>Reduce Quantity</button>;
+  }
   return (
     <React.Fragment>
       <div onClick = {() => props.whenTapClicked(props.id)}>
@@ -9,7 +14,8 @@ function Tap(props){
         <h3>{props.brand}</h3>
         <h3>{props.price}</h3>
         <h3>{props.alcoholContent}</h3>
-        <AmountLeft amountLeft = {props.amountLeft} />
+        <h3>{props.amountLeft}</h3>
+        <h3>{selling}</h3>
       <hr/>
       
       </div>
