@@ -1,7 +1,7 @@
 # Civic Tap Room
 An app that keeps track of kegs in a tap room.
 
-<img src="taproom.png"
+<img src="./src/taproom.png"
      alt="Taproom diagram"
      />
 
