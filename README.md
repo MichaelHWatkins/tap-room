@@ -3,9 +3,9 @@ An app that keeps track of kegs in a tap room.
 
 <img src="taproom.png"
      alt="Taproom diagram"
-     style="float: left; margin-right: 10px;" />
+     />
 
-#### By Drew Henderson, Hannah Young, Liam Eller, Mike Watkins & Karen Axon
+#### By Mike Watkins
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
